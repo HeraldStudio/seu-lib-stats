@@ -48,14 +48,18 @@
   }
   body {
     height: 100vh;
-    background: url("../static/bg.png");
-    background-size:100% 100%;
+    
   }
   div {
     background-color: rgba(255, 255, 255, 0);
   }
   #app {
-    height: 100%;
+    height: 100vh;
+    background: url("../static/bg.png");
+    background-size:100% 100%;
+    position: fixed;
+    top:0;
+    left: 0;
   }
   .ivu-progress-inner {
     padding: 1px;
