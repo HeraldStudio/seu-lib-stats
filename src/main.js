@@ -12,7 +12,6 @@ import 'animate.css'
 Vue.use(iView)
 Vue.use(VueFullpage)
 
-router.afterEach(route => document.title = route.name)
 
 const vm = new Vue({
   el: '#app',

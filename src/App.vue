@@ -24,12 +24,12 @@
   :root {
     -webkit-tap-highlight-color: transparent;
   }
-  @font-face {
-    font-family: "XingZheNote";
-    src: url("../static/fonts/XingZheNote.woff");
-  }
+  /* @font-face {
+     font-family: "XingZheNote";
+    src: url("../static/fonts/XingZheNote.woff"); 
+  } */
   * {
-    font-family: 'XingZheNote', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Noble Scarlet,PingFang SC,Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei UI,sans-serif;
   }
   a, a:link, a:hover, a:active, a:focus, a:visited {
     color: inherit;
@@ -47,7 +47,7 @@
     height: 100%;
   }
   body {
-    height: 100%;
+    height: 100vh;
     background: url("../static/bg.png");
     background-size:100% 100%;
   }

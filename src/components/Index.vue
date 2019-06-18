@@ -47,6 +47,11 @@
     },
     async created () {
       this.data = this.$route.params.data
+      if(!this.data){
+        this.$router.replace({
+              path:'/'
+          })
+      }
       let [ firstBook, firstEnter, totalBorrow, enter, longestBorrow, portrait ] = this.data
       this.bookData = {
         totalBorrow: Object.keys(totalBorrow).length !== 0 ? totalBorrow : null,

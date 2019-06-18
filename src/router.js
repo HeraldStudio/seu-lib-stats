@@ -12,12 +12,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: '登录',
       component: Login
     }, 
     {
       path: '/index',
-      name: '首页',
       component: Index
     }
   ]

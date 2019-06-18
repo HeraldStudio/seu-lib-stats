@@ -24,16 +24,17 @@
       appear-active-class="animated fadeIn delay-2s"
     >
       <div class="input-level">
-        <Input v-model="cardnum" placeholder="你的一卡通号" />
-        <Input v-model="name" placeholder="你的姓名" />
+        <Input v-model="cardnum" size="large" placeholder="你的一卡通号" />
+        <Input v-model="name" size="large" placeholder="你的姓名" />
       </div>
     </transition>
 
     <transition
-      enter-active-class="animated fadeInUp"
+      appear
+      appear-active-class="animated bounceInDown slow"
     >
-      <a class="btn" @click="login" v-if="isInputFinished">
-        开启回忆 ...
+      <a class="btn" @click="login">
+        开启回忆
       </a> 
     </transition>
   </div>
@@ -85,7 +86,7 @@
 
           if (res.result) {
             this.$router.replace({
-              name: "首页",
+              path:'/index',
               params: {
                 data: res.data
               }
@@ -131,12 +132,15 @@
     width: 50%;
     margin-top: 10%;
   }
+
   .ivu-input-wrapper {
     padding: 0;
     margin: 10px 0;
+    
   }
   .ivu-input {
     opacity: 0.8;
+    font-size: 24px !important;
   }
   .btn {
     width: 50%;
