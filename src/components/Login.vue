@@ -19,6 +19,14 @@
     </transition>
 
     <transition
+        appear
+        appear-active-class="animated fadeIn delay-2s"
+      >
+      <div class="title-level">
+        <p class="subtitle">和我一起，划船去图书馆吧！</p>
+      </div>
+    </transition>
+    <transition
       appear
       appear-active-class="animated fadeIn delay-2s"
     >
@@ -89,7 +97,8 @@
             this.$router.replace({
               name:'show',
               params: {
-                data: res.data
+                data: res.data,
+                cardnum: this.cardnum
               }
             })
           } else {

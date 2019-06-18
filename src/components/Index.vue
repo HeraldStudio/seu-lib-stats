@@ -55,6 +55,7 @@
           })
       }
       let [ firstBook, firstEnter, totalBorrow, enter, longestBorrow, portrait ] = this.data
+      portrait.cardnum = this.$route.params.cardnum
       this.bookData = {
         totalBorrow: Object.keys(totalBorrow).length !== 0 ? totalBorrow : null,
         firstBook: Object.keys(firstBook).length !== 0 ? firstBook : null,
