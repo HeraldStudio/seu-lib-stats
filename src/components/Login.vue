@@ -157,13 +157,13 @@
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20%;
+    margin-top: 10%;
   }
   .btn-container{
     width: 50%;
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 </style>

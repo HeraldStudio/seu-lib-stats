@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div id="bg"></div>
     <router-view/>
   </div>
 </template>
@@ -56,13 +57,15 @@
   #app {
     height: 100vh;
   }
-  body {
+  #bg {
+    width: 100vh;
     height: 100vh;
     background: url("../static/bg.png");
     background-size:100% 100%;
     top:0;
     left: 0;
     z-index: -10;
+    position: fixed;
   }
   .ivu-progress-inner {
     padding: 1px;
