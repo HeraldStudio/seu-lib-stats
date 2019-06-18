@@ -7,7 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../dist-tmp/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist-tmp'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '//cdn.myseu.cn/library/',
+    assetsPublicPath: '//cdn.myseu.cn/library-show/',
     productionSourceMap: true,
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
