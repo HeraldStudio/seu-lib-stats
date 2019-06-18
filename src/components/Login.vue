@@ -1,6 +1,5 @@
 <template>
   <div>
-  
   <div id="login" class="flex-column-container">
     <transition 
       appear
@@ -13,7 +12,7 @@
       appear
       appear-active-class="animated lightSpeedIn delay-2s"
     >
-      <div class="flex-column-container title-level">
+      <div class="title-level">
         <p class="title-static">de</p>
         <p class="title-animate animated tada delay-3s">毕业回忆</p>
       </div>
@@ -31,11 +30,13 @@
 
     <transition
       appear
-      appear-active-class="animated bounceInDown slow"
+      appear-active-class="animated fadeIn slow delay-2s"
     >
+    <div class="btn-container">
       <a class="btn" @click="login">
         开启回忆
       </a> 
+    </div>
     </transition>
   </div>
 </div>
@@ -83,10 +84,10 @@
               name: this.name
             })
           this.$Message.destroy()
-
+          
           if (res.result) {
             this.$router.replace({
-              path:'/index',
+              name:'show',
               params: {
                 data: res.data
               }
@@ -109,6 +110,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
   }
   .logo {
     width: 80%;
@@ -116,6 +118,9 @@
   }
   .title-level {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .title-animate {
     font-size: 4.5em;
@@ -130,7 +135,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   .ivu-input-wrapper {
@@ -143,7 +148,7 @@
     font-size: 24px !important;
   }
   .btn {
-    width: 50%;
+    width: 100%;
     padding: 15px;
     border: 2px solid #ddd;
     border-radius: 30px;
@@ -152,7 +157,13 @@
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
-    position: fixed;
-    bottom: 60px;
+    margin-bottom: 20%;
+  }
+  .btn-container{
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 </style>

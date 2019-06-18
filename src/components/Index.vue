@@ -46,7 +46,9 @@
       Portrait
     },
     async created () {
+      console.log(this.$route)
       this.data = this.$route.params.data
+      console.log(this.data)
       if(!this.data){
         this.$router.replace({
               path:'/'

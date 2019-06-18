@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import moment from 'moment';
   export default {
     data () {
       return {
@@ -100,8 +101,8 @@
     },
     methods: {
       parseTime (t) {
-        let d = new Date(t)
-        return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`
+        let d = moment(t, "YYYY-M-D HH:mm:ss")
+        return `${d.year()}年${d.month() + 1}月${d.date()}日`
       }
     }
   }

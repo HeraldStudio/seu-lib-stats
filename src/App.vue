@@ -55,11 +55,14 @@
   }
   #app {
     height: 100vh;
+  }
+  body {
+    height: 100vh;
     background: url("../static/bg.png");
     background-size:100% 100%;
-    position: fixed;
     top:0;
     left: 0;
+    z-index: -10;
   }
   .ivu-progress-inner {
     padding: 1px;
