@@ -13,7 +13,6 @@
       appear-active-class="animated lightSpeedIn delay-2s"
     >
       <div class="title-level">
-        <p class="title-static">de</p>
         <p class="title-animate animated tada delay-3s">毕业回忆</p>
       </div>
     </transition>
