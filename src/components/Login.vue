@@ -51,7 +51,7 @@
 
 <script>
   import api from '@/api'
-
+  import moment from 'moment'
   export default {
     data () {
       return {
@@ -74,7 +74,14 @@
       },
       async login () {
         if (this.isInputFinished) {
-
+          let now = +moment()
+          let openTime = +moment('2019-06-21 11:30', 'YYYY-MM-DD HH:mm')
+          if(now < openTime){
+            this.$Message.info({
+              content: "尚未开放～敬请期待！"
+            })
+            return
+          }
           if (!/^[12]\d{8}$/.test(this.cardnum)) {
             this.$Message.error({
               content: "一卡通号写错啦>_<"
@@ -82,7 +89,7 @@
             return
           }
           if(!(this.cardnum.startsWith('21315')||this.cardnum.startsWith('21314'))){
-            this.$Message.error({
+            this.$Message.info({
               content: "仅限14、15级本科生访问哦～"
             })
             return
