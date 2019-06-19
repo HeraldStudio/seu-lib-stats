@@ -81,6 +81,12 @@
             })
             return
           }
+          if(!(this.cardnum.startsWith('21315')||this.cardnum.startsWith('21314'))){
+            this.$Message.error({
+              content: "仅限14、15级本科生访问哦～"
+            })
+            return
+          }
 
           this.$Message.loading({
             content: "正在提取回忆……",
